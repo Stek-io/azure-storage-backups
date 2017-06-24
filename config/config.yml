@@ -1,0 +1,7 @@
+file:
+  user:
+  pass:
+  storage_account_name:
+  storage_account_key:
+
+backup_directory: "/tmp/azure"
