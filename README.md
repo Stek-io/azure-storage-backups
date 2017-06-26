@@ -6,9 +6,10 @@ _Under Development_
 
 ## Requirements
 - python 3
+- pip
 
 ## Setup Environment
-- pip install -r requirements.txt
+- run `./bin/bootstrap.sh`: creates a Python Virtual Environment named venv
 
 ## Run the backups
 - copy config.yml into config-production.yml
@@ -18,7 +19,7 @@ _Under Development_
   - storage_account_name: the name of the Azure Storage Account
   - storage_account_key: an access key for the Storage Account
   - backup_directory: full path to the backup directory
-- run: `app/start.py --config-file <path to config config-production.yml>`
+- run `./bin/runonce.sh <path to config config-production.yml>`
 
 ## Output
 
