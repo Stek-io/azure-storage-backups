@@ -5,6 +5,7 @@ import time
 import tarfile
 
 from azure.common import AzureHttpError
+from azure.common import AzureException
 from azure.storage.file.fileservice import FileService
 from azure.storage.file import models
 
@@ -151,7 +152,7 @@ class AzureFileBackup(object):
             self._file_service.get_file_to_path(share_name=share_name,
                                                 directory_name=source_directory,
                                                 file_name=source_filename, file_path=file_path)
-        except (FileNotFoundError, AzureHttpError):
+        except (FileNotFoundError, AzureHttpError, AzureException):
             self._logger.exception(
                 "Failed downloading file %s to %s" % (source_filename, target_directory))
 
